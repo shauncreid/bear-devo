@@ -1,0 +1,28 @@
+CREATE DATABASE `devo_leveling`
+DEFAULT CHARACTER SET utf8
+COLLATE utf8_general_ci;
+
+CREATE TABLE devo_leveling.athletes (ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name TEXT,
+    last_name TEXT,
+    coach TEXT,
+    gender TEXT, 
+    year_born INTEGER,
+    pressure TEXT,
+    edging TEXT,
+    rotary TEXT,
+    balance TEXT);
+    
+CREATE TABLE devo_leveling.coaches
+    UserID      INT PRIMARY KEY AUTO_INCREMENT,
+    firstname	  VARCHAR(150)
+    lastname	  VARCHAR(150)
+    Username    VARCHAR(150) NOT NULL,
+    Password    VARCHAR(150),
+    ver_code    VARCHAR(150),
+    verified    TINYINT DEFAULT 0;
+    
+CREATE TABLE devo_leveling.teams
+    ListID      INT PRIMARY KEY AUTO_INCREMENT,
+    UserID      INT NOT NULL,
+    ListURL     VARCHAR(150);
